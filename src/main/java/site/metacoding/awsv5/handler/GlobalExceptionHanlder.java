@@ -10,6 +10,7 @@ public class GlobalExceptionHanlder {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<?> serverError(RuntimeException e) {
+        //test
         return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
